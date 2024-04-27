@@ -1,0 +1,72 @@
+2024-04-26 23:05:12,477 - app - ERROR - Exception on /api/getdata/1 [GET]
+Traceback (most recent call last):
+  File "/Users/gurmindersingh/microservice_flaskapp/user/venv/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gurmindersingh/microservice_flaskapp/user/venv/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gurmindersingh/microservice_flaskapp/user/venv/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gurmindersingh/microservice_flaskapp/user/venv/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gurmindersingh/microservice_flaskapp/data/app/routes.py", line 13, in fetch_user_data
+    prefix = os.getenv(USER_SVC_DNS)
+                       ^^^^^^^^^^^^
+NameError: name 'USER_SVC_DNS' is not defined
+2024-04-26 23:05:12,877 - app - ERROR - Exception on /api/getdata/1 [GET]
+Traceback (most recent call last):
+  File "/Users/gurmindersingh/microservice_flaskapp/user/venv/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gurmindersingh/microservice_flaskapp/user/venv/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gurmindersingh/microservice_flaskapp/user/venv/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gurmindersingh/microservice_flaskapp/user/venv/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gurmindersingh/microservice_flaskapp/data/app/routes.py", line 13, in fetch_user_data
+    prefix = os.getenv(USER_SVC_DNS)
+                       ^^^^^^^^^^^^
+NameError: name 'USER_SVC_DNS' is not defined
+2024-04-26 23:06:18,005 - app - ERROR - Exception on /api/getdata/1 [GET]
+Traceback (most recent call last):
+  File "/Users/gurmindersingh/microservice_flaskapp/user/venv/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gurmindersingh/microservice_flaskapp/user/venv/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gurmindersingh/microservice_flaskapp/user/venv/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gurmindersingh/microservice_flaskapp/user/venv/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gurmindersingh/microservice_flaskapp/data/app/routes.py", line 13, in fetch_user_data
+    prefix = os.getenv('USER_SVC_DNS')
+                       ^^^^^^^^^^^^
+NameError: name 'USER_SVC_DNS' is not defined
+2024-04-26 23:06:18,756 - app - ERROR - Exception on /api/getdata/1 [GET]
+Traceback (most recent call last):
+  File "/Users/gurmindersingh/microservice_flaskapp/user/venv/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gurmindersingh/microservice_flaskapp/user/venv/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gurmindersingh/microservice_flaskapp/user/venv/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gurmindersingh/microservice_flaskapp/user/venv/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gurmindersingh/microservice_flaskapp/data/app/routes.py", line 13, in fetch_user_data
+    prefix = os.getenv('USER_SVC_DNS')
+                       ^^^^^^^^^^^^
+NameError: name 'USER_SVC_DNS' is not defined

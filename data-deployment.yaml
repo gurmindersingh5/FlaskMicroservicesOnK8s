@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: data-service-dsv1
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: dsv1
+  template:
+    metadata:
+      labels:
+        app: dsv1
+    spec:
+      containers:
+      - name: dsv1-ctn
+        image: gurmindersingh5/flask:dsv1
+        ports:
+        - containerPort: 8081
+        env:
+          - name: USER_SVC_DNS
+            valueFrom:
+              configMapKeyRef:
+                name: data-service-config
+                key: USER_SVC_DNS

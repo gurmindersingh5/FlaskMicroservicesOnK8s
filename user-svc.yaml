@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service
+  labels:
+    app: usv1
+spec:
+  type: NodePort
+  selector:
+    app: usv1  
+  ports:
+  - port: 8082
+    targetPort: 8082
