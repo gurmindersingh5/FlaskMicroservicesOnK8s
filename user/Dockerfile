@@ -1,10 +1,17 @@
-FROM python:3.8-slim
+FROM ubuntu:22.04
 
 WORKDIR /
 
 COPY . /
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN apt-get update && \
+    apt-get install -y python3-pip python3-dev libpq-dev && \
+    pip3 install --no-cache-dir -r requirements.txt
+
+# Ensure that Python and Pip point to Python3 versions
+RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 1 && \
+    update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
+
 
 # REQUIRE ENV variables on runtime
 #DB_USER
