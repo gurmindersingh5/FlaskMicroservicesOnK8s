@@ -62,3 +62,5 @@ access both the services ( user and data ) on Node's ipaddress with ports 8082 a
 apis are listed on homepage
 
 note 3: using binary of pycopg2 as its for development pursposes not production. psycopg2-binary
+
+note* install nginx ingress controller on cluster 
