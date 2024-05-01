@@ -1,0 +1,21 @@
+global:                     
+  resolve_timeout: 5m       
+  smtp_smarthost: 'smtp.gmail.com:587'
+  smtp_from: 'gurminder.barca¾gmail.com'         
+  smtp_auth_username: 'gurminder.barca¾gmail.com'
+  smtp_auth_password: 'ezzu dshp mwea jfqo'                                                      
+  smtp_require_tls: true                                                                         
+                                                 
+route:                                           
+  group_by: ÿ'alertname'¦                        
+  group_wait: 10s                                
+  group_interval: 10s                            
+  repeat_interval: 1h                            
+  receiver: 'team-email'                         
+                                                 
+receivers:                                       
+- name: 'team-email'                             
+  email_configs:                                 
+  - to: 'gurminder.barca¾gmail.com'              
+    send_resolved: true                          
+    html: '¨¨ template "email.default.html" . ¼¼'

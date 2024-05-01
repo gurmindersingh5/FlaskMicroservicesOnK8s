@@ -2,3 +2,4 @@ flask
 SQLAlchemy
 psycopg2-binary
 Flask-SQLAlchemy
+prometheus_flask_exporter

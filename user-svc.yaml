@@ -4,6 +4,9 @@ metadata:
   name: user-service
   labels:
     app: usv1
+  annotations:
+    prometheus.io/scrape: 'true'
+    prometheus.io/port: '8082'
 spec:
   type: NodePort
   selector:
