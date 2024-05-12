@@ -1,0 +1,44 @@
+version: 0.2
+
+env:
+  parameter-store:
+    DOCKER_USER: /flaskapp/docker-cred/username
+    DOCKER_PASS: /flaskapp/docker-cred/password
+    DOCKER_URL: /flaskapp/docker-registry/url
+    
+phases:
+  install:
+    runtime-versions:
+      python: 3.9
+  install:
+    commands:
+      - echo "[+] Scanning for security vulnerability within dependencies"
+      # - pipenv check (if pipenv is installed and a Pipfile is in place)
+      # - Alternatively: https://www.owasp.org/index.php/OWASP_Dependency_Check
+  pre_build:
+    commands:
+      - echo "[+] Skipping running test"
+      # - pip install pytest requests
+      # - echo "[+] Running tests..."
+      # - python -m pytest tests/ -v
+  build:
+    commands:
+      - echo "[+] Installing dependencies...."
+      - pip install -r data/requirements.txt
+      - echo "Starting SAM packaging `date` in `pwd`"
+      - docker build -t "$DOCKER_URL/$DOCKER_USER/flask:latest"
+      - docker push "$DOCKER_URL/$DOCKER_USER/flask:latest"
+      
+      # - aws cloudformation package --template-file template.yaml --s3-bucket $BUILD_OUTPUT_BUCKET --output-template-file packaged.yaml
+  post_build:
+    commands:
+      - echo "Docker build completed on `date`"
+
+# artifacts:
+#   files:
+#     - packaged.yaml
+#   discard-paths: yes
+
+# cache:
+#   paths:
+#     - '/root/.cache/pip'
