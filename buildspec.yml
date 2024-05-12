@@ -26,8 +26,8 @@ phases:
       - echo "[+] Installing dependencies...."
       - pip install -r data/requirements.txt
       - echo "Starting SAM packaging `date` in `pwd`"
-      - docker build -t "$DOCKER_URL/$DOCKER_USER/flask:latest"
-      - docker push "$DOCKER_URL/$DOCKER_USER/flask:latest"
+      - docker build -t "$DOCKER_URL/$DOCKER_USER/flask:latest" -f data/Dockerfile
+      # - docker push "$DOCKER_URL/$DOCKER_USER/flask:latest"
       
       # - aws cloudformation package --template-file template.yaml --s3-bucket $BUILD_OUTPUT_BUCKET --output-template-file packaged.yaml
   post_build:
